@@ -1,0 +1,26 @@
+﻿<Window x:Class="WpfApp2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid x:Name="Students_list">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="121*"/>
+            <ColumnDefinition Width="255*"/>
+            <ColumnDefinition Width="424*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="Add_Student" Content="Add" Margin="34,383,147,10" Background="#FF9AA3B5" BorderBrush="#FF121111" Foreground="Black" BorderThickness="2,2,2,2" Click="Add_Student_Click" Grid.Column="1"/>
+        <TextBox x:Name="TextBox_Student" TextWrapping="Wrap" Margin="10,370,226,10" BorderBrush="#FF080505" Background="#FF9BA3B3" Foreground="#FF101215" Grid.ColumnSpan="2"/>
+        <Button x:Name="Clear_Field" Content="Clear" Margin="113,383,68,10" Background="#FF9AA3B5" BorderBrush="#FF121111" Foreground="Black" BorderThickness="2,2,2,2" Click="Clear_Field_Click" Grid.Column="1"/>
+        <ListBox x:Name="Students_list1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,10,242,99" RenderTransformOrigin="0.554,0.583" BorderBrush="#FF040404" SelectedItem="{Binding Student_Name}" Grid.ColumnSpan="2" />
+        <ListBox x:Name="Goods_list" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="18,10,113,99" RenderTransformOrigin="0.554,0.583" BorderBrush="#FF040404" Grid.Column="1" SelectionChanged="Goods_list_SelectionChanged" SelectedItem="{Binding Good_Name}"/>
+        <ListBox x:Name="Bads_list" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="150,10,405,99" RenderTransformOrigin="0.554,0.583" BorderBrush="#FF040404" Grid.Column="1" Grid.ColumnSpan="2" SelectionChanged="Bads_list_SelectionChanged" SelectedItem="{Binding Bad_Name}"/>
+        <Button x:Name="Add_Good" Content="Add" Margin="51,342,145,63" Click="Add_Good_Click" BorderBrush="Black" Grid.Column="1"/>
+        <Button x:Name="Add_Bad" Content="Add" Margin="177,342,8,62" Click="Add_Bad_Click" BorderBrush="#FF040404" Grid.Column="1"/>
+        <Button x:Name="Clear_all" Content="Clear all" Grid.Column="2" Margin="269,173,52,146" BorderBrush="#FF060505" Background="#FF7F838C" Click="Clear_all_Click"/>
+        <ListBox x:Name="Count" ItemsSource="{Binding Items}" Grid.Column="2" Margin="24,10,279,99" BorderBrush="#FF0E0D0D" SelectedItem="{Binding Ocenka}"/>
+    </Grid>
+</Window>
