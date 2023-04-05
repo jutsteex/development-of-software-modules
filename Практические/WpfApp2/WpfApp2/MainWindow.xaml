@@ -1,0 +1,36 @@
+﻿<Window x:Class="WpfApp2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="300" Width="300">
+
+    <Grid>
+        <Button x:Name="button1" Width="90" Height="30" Background="LightGray" Content="Delete element" VerticalAlignment="Top" Margin="20" Click="button1_Click"/>
+        <Grid Margin="0,55,0,0">
+            <TreeView x:Name="Treeview1">
+                <TextBox>Элемент TreeView</TextBox>
+                <TreeViewItem Header="Базы данных">
+                    <TreeViewItem Header="MS SQL Server" />
+                    <TreeViewItem Header="MySQL" />
+                    <TreeViewItem Header="MongoDB" />
+                    <TreeViewItem Header="Postgres" />
+                </TreeViewItem>
+                <TreeViewItem Header="Языки программирования">
+                    <TreeViewItem Header="C-языки">
+                        <TreeViewItem Header="C#" />
+                        <TreeViewItem Header="C/C++" />
+                        <TreeViewItem Header="Java" />
+                    </TreeViewItem>
+                    <TreeViewItem Header="Basic">
+                        <TreeViewItem Header="Visual Basic" />
+                        <TreeViewItem Header="VB.Net" />
+                        <TreeViewItem Header="PureBasic" />
+                    </TreeViewItem>
+                </TreeViewItem>
+            </TreeView>
+        </Grid>
+    </Grid>
+</Window>
